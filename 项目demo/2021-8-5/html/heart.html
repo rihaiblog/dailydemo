@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       *{
+           padding: 0;
+           margin: 0;
+       }
+       body{
+           width: 100vw;
+           height: 100vh;
+           background-color: #2c3e50;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .heart{
+              width: 200px;
+              height: 200px;
+              background-color: #c0392b;
+              transform: rotate(45deg) scale(0.5); 
+              animation: heart 2s infinite;
+              opacity: 0.4;
+       }
+       @keyframes heart {
+          25%{
+            transform: rotate(45deg) scale(1); 
+            opacity: 1;
+           }
+           50%{
+            transform: rotate(45deg) scale(0.5); 
+            opacity: 0.4;
+           }
+           75%{
+            transform: rotate(45deg) scale(1); 
+            opacity: 1;
+           }
+       }
+       .heart::after{
+             content: '';
+              width: 200px;
+              height: 200px;
+              border-radius: 50%;
+              position: absolute;
+              background-color:#c0392b; 
+              transform: translateY(-100px);
+               
+       }
+      
+       .heart::before{
+              content: '';
+              width: 200px;
+              height: 200px;
+              border-radius: 50%;
+              position: absolute;
+              background-color: #c0392b;
+              transform: translateX(-100px); 
+              
+       }
+       @keyframes h1 {
+           to{
+                opacity: 1;
+           }
+       }
+
+       h1{
+           position: absolute;
+           margin-top: -500px;
+           opacity: 0;
+           animation: h1 2s ;
+           animation-delay: 2s;
+           animation-fill-mode: forwards;   //停留在最后
+       }
+   </style>
+</head>
+<body>
+        <h1>我喜欢你</h1>
+        <div class="heart">
+           
+        </div>
+</body>
+</html>

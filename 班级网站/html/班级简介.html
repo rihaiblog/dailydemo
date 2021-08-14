@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>班级简介</title>
+		<style>
+			#con {
+				width: 1000px;
+				height: 440px;
+				margin: 10px auto;
+				background: #EACEB7;
+			}
+
+			#left {
+				width: 600px;
+				height: 400px;
+				border: 1px solid #fff;
+				margin: 10px;
+				float: left;
+				position: relative;
+			}
+
+			#right {
+				width: 300px;
+				height: 400px;
+				border: 1px solid #fff;
+				margin: 10px;
+				float: right;
+			}
+
+			/*设置图片大小*/
+			#left #img1 {
+				width: 600px;
+				height: 400px;
+			}
+
+			#prev {
+				left: 10px;
+				width: 40px;
+				height: 40px;
+				background: #fff;
+				filter: alpha(opacity:80);
+				opacity: 0.8;
+				position: absolute;
+				top: 160px;
+				font-size: 18px;
+				color: #000;
+				text-align: center;
+				line-height: 40px;
+				text-decoration: none;
+			}
+
+			#prev hover {
+				filter: alpha(opacity:30);
+				opacity: 0.3;
+			}
+
+			#next {
+				right: 10px;
+				width: 40px;
+				height: 40px;
+				background: #fff;
+				filter: alpha(opacity:80);
+				opacity: 0.8;
+				position: absolute;
+				top: 160px;
+				font-size: 18px;
+				color: #000;
+				text-align: center;
+				line-height: 40px;
+				text-decoration: none;
+			}
+
+			#next hover {
+				filter: alpha(opacity:30);
+				opacity: 0.3;
+			}
+
+			#right #title {
+				margin: 10px;
+				height: 50px;
+				width: 90%;
+				color: #000000;
+				border-bottom: 1px solid #fff;
+				font-weight: bolder;
+				font-size: 36px;
+			}
+
+			#right #num1 {
+				margin: 10px;
+				height: 20px;
+				width: 90%;
+				color: #000000;
+				text-align: right;
+			}
+
+			#right #p1 {
+				margin: 10px;
+				height: 260px;
+				width: 90%;
+				color: #FF0000;
+				border-bottom: 1px solid #fff;
+				font-weight: bolder;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var img_arr = ["../images/active1.jpg", "../images/军训.jpg", "../images/捕获12.png", "../images/宿舍.jpg"]
+				var title_arr = [ "班级团建", "军训","班级成绩", "宿舍"]
+				var content_arr = [
+					"生命如果是一首诗，那青春就是这首诗中最优美的字句;生命如果是一首歌，那青春就是这首歌中最华彩的乐章。的团员青年正在用自己的行动谱写着这优美的诗句，华彩的乐章。在XX年年度里，我们支部以“青春因我们而精彩”这一思想为主旨，开展了一系列活动，切实做好支部成员的思想建设，加强班级集体文化建设，构建和谐班级。一年来，支部成员积极响应团组织号召，知八荣明八耻，努力实践德智体美劳全面发展。",
+					"军训教之我们团结。它使我们凝聚在同一片蓝天下，使我们每个人的心”纠缠在一起，没有任何力量可以冲破它，也没有任何因素可以打跨自己，我们的心纠缠于无止境的整体中。当窒热的太阳高挂我们头顶时，汗水在我们的身上挥洒，而我们依然喊着“一，二，三，四。”军训让我们拥有耐心和决心。教官让我们围着这个地方绕好大的圈子时，没有一个人抱怨，也没有一个人因为困难成为半途的“弃儿”。它在我们每个人心中播下“不达目标，永不言弃”的种子。随着时间一点一滴流去，这种意念将永耕我们的心中。军训也挥洒着我们的激情。拉歌比赛也让我们感受到军训枯燥生活之外的乐趣，沉重而又紧张的心情忽然间放松下来。在这里我们激情奋发，在这里充满欢声笑语。",
+					"第一,总体统计包括学生平均绩点统计、同比增减、在院系的排名等第二、挂科统计包括挂科人数统计、挂科率、在院系的排名等第三、成绩与问题有哪些进步和不足第四、对策与建议通过哪些手段可以进一步提高同学们的成绩",
+					"六人间 上床下桌 有空调有洗衣机宿舍很好有一说一，空调洗衣机都有但是不能用大功率电器环境各不一样，北苑属于最好的，南苑第二吧，但南苑方便，不用走那么远的路回宿舍，宿舍都有空调洗衣机，洗衣机（3-4块一次）上床下桌，两个独卫一般都是上床下桌，六人间，有空调西区上床下桌六人间 有空调 有洗衣机北苑和南苑都在西区，只不过北苑南苑在的位置不同，南苑比较靠近教室，上课比较方便，北苑比较新一点。"
+				]
+				var oImg1 = document.getElementById('img1')
+				var next = document.getElementById('next')
+				var prev = document.getElementById('prev')
+				var title = document.getElementById('title')
+				var p1 = document.getElementById('p1')
+				var num1 = document.getElementById('num1')
+
+
+				var num = 0
+
+				function imgTab() {
+					oImg1.src = img_arr[num]
+					title.innerHTML = title_arr[num]
+					p1.innerHTML = content_arr[num]
+					num1.innerHTML = (num + 1) + "/ " + img_arr.length
+				}
+
+				imgTab()
+
+				next.onclick = function() {
+
+					num += 1
+					if (num == img_arr.length) {
+						num = 0
+					}
+
+					imgTab()
+
+				}
+				prev.onclick = function() {
+					num -= 1
+					if (num == -1) {
+						num = (img_arr.length - 1)
+					}
+					imgTab()
+
+				}
+			}
+		</script>
+		<link href="../css1/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="logo">网络工程一班</div>
+				<div id="menu">
+					<ul>
+						<li><a href="index.html">班级首页</a></li>
+						<li><a href="班级简介.html">班级简介</a></li>
+						<li><a href="班级动态.html">班级动态</a></li>
+						<li><a href="教师介绍.html">教师介绍</a></li>
+						<li><a href="作者简介.html">作者简介</a></li>
+						<li><a href="http://jwglxt.hzxy.edu.cn/jwglxt">成绩查询</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="gun">
+				<marquee scrollamount="8" bgcolor="beige" width="1000px" height="20px" direction="left">欢迎你的到来!!!!
+				</marquee>
+			</div>
+			<div><img src="../images/2012.jpeg" width="1000px" height="200px" /></div>
+			<div>
+				<div id="con">
+					<div id="left">
+						<img id="img1">
+						<a id="prev" href="#">
+							< </a>
+								<a id="next" href="#">> </a>
+					</div>
+					<div id="right">
+						<div id="title"></div>
+						<div id="p1"></div>
+						<div id="num1"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div id="footer">
+			<div class="footer-links">
+			   <ul>
+			   						<li><a href="index.html">班级首页</a></li>
+			   						<li><a href="班级简介.html">班级简介</a></li>
+			   						<li><a href="班级动态.html">班级动态</a></li>
+			   						<li><a href="教师介绍.html">教师介绍</a></li>
+			   						<li><a href="关于我们.html">作者简介</a></li>
+			   						<li><a href="http://jwglxt.hzxy.edu.cn/jwglxt">成绩查询</a></li>
+			   					</ul>
+			        <div class="clear"></div>
+			       网络工程一班 
+			  </div>
+			</div>
+

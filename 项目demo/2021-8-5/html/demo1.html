@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style type="text/css">
+        body{
+			width:1400px;
+			height:900px;
+			background: url(../img/01.jpg) no-repeat ;
+			background-size: 100% 100%
+		}
+		</style>
+	</head>
+	<body>
+		<div class="rian"></div>
+		<script>
+			setInterval(function() {
+				var rian = document.createElement('div')
+				rian.style.position = "fixed"
+				rian.style.height = "150px"
+				rian.style.width = "2px"
+				rian.style.background = "bisque"
+				rian.style.filter = "blur(1px)"
+				rian.style.top = '0px'
+				rian.style.left = Math.random() * 1920 + "px"
+				rian.style.opacity = parseInt(Math.random() * 10) / 10 + ""
+				document.body.appendChild(rian);
+				var timer = setInterval(function() {
+					var height = parseInt(rian.style.top);
+					var k = 1
+					k++
+					rian.style.top = height + 5 * Math.pow(k, 2)+"px"
+					if (parseInt(rian.style.top) == 900) {
+						clearInterval(timer)
+						rian.parentNode.removeChild(rian)
+					}
+				}, 4)
+			}, 12)
+		</script>
+	</body>
+</html>

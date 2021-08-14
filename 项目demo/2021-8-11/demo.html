@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#elem-container {
+				position: absolute;
+				left: 100px;
+				top: 200px;
+				height: 100px;
+				background-color: #004AFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="elem-container">dummy</div>
+		<div id="output"></div>
+		<script>
+			// function getTheStyle() {
+			// 	var elem = document.getElementById("elem-container");
+			// 	var theCSSprop = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+			// 	document.getElementById("output").innerHTML = theCSSprop;
+			// }
+			// getTheStyle();
+			
+             var elem = document.getElementById("elem-container")
+			function dumpComputedStyles(elem,prop) {
+			
+			  var cs = window.getComputedStyle(elem,null);
+			    console.log(cs.length)
+			  if (prop) {
+			    console.log(prop+" : "+cs.getPropertyValue(prop));
+			    return;
+			  }
+			
+			  var len = cs.length;
+			  for (var i=0;i<len;i++) {
+			  			 
+			    var style = cs[i];
+			    console.log(style+" : "+cs.getPropertyValue(style));
+			  }
+			  			
+			
+			}
+			dumpComputedStyles(elem,"top")
+		</script>
+	</body>
+</html>

@@ -1,0 +1,179 @@
+.main{
+	width: 980px;
+	height: 455px;
+	margin-left: 220px;
+	margin-top: 10px;
+}
+.focus{
+	float: left;
+	width: 721px;
+	height: 455px;
+	background-color: #C81623;
+}
+.newflash{
+	float: right;
+	width: 250px;
+	height: 455px;
+}
+.new{
+	height: 165px;
+	border: 1px solid #E4E4E4;
+}
+.lifeservice{
+	height: 209px;
+	border: 1px solid #E4E4E4;
+	border-top: 0;
+	  
+}
+.bargian img{
+	margin-top: 5px;
+}
+.new .new-hd{
+	height: 33px;
+	line-height: 33px;
+	border-bottom: 1px dotted #e4e4e4;
+}
+.new .new-hd h5{
+	float: left;
+	font-size: 14px;
+	padding: 0 15px;
+}
+.new-hd .more{
+	float: right;
+}
+.more::after{
+	content: '\e920';
+	font-family: 'icomoon';
+}
+.new-bd ul li{
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.new-bd{
+	padding: 5px 15px 0;
+}
+.lifeservice ul li{
+	margin-left: -1px;
+	float: left;
+	width: 63px;
+	height: 71px;
+	text-align: center;
+	border-right: 1px solid #E4E4E4;
+	border-bottom: 1px solid #E4E4E4;
+	
+}
+.lifeservice ul li i{
+	display:inline-block;
+	width: 24px;
+	height: 28px;
+	margin-top: 12px;
+	background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.recom{
+	height: 163px;
+	background-color: #ebebeb;
+	margin-top: 12px;
+}
+.recom-hd{
+	float: left;
+	height: 163px;
+	width: 205px;
+	background-color: #666666;
+	text-align: center;
+	padding-top: 30px;
+}
+.recom-bd{
+	float: left;
+}
+.recom-bd ul li{
+	position: relative;
+	float: left;
+	
+}
+.recom-bd ul li img {
+	width: 248px;
+	height: 163px;
+}
+.recom-bd ul li:nth-child(-n+3)::after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 10px;
+	width: 1px;
+	height: 145px;
+	background-color: #ddd;
+}
+.box-hd{
+	height: 30px;
+	border-bottom: 2px solid #990033;
+	}
+.box-hd h3{
+	float: left;
+	font-size: 18px;
+	color: #C81623;
+	font-weight: 400;
+}
+.table-list{
+	float: right;
+	line-height: 30px;
+}
+.table-list  ul{
+	margin-left: -2px;
+}
+.table-list ul li{
+	position: relative;
+	float: left;
+}
+.table-list ul li a{
+	margin: 0 15px;
+}
+.table-list ul li:nth-child(-n+8)::after{
+	content: "";
+	position: absolute;
+	margin-top: 7px;
+	width: 1px;
+	height: 13px;
+	background-color: #999999;
+}
+.floor .w{
+	margin-top: 30px;
+}
+.box-bd{
+	height: 361px;
+	
+}
+.table-list-item>div{
+	float: left;
+	height: 361px;
+}
+.col_210{
+	width: 210px;
+	background-color: #f9f9f9;
+	text-align: center;
+	
+}
+.col_210 ul {
+	padding-left: 12px;
+}
+.col_210 ul li {
+	float: left;
+	width: 85px;
+	height: 24px;
+	border-bottom: 1px solid #999999;
+	text-align: center;
+	line-height: 33px;
+	margin-right: 10px;
+}
+.col_329{
+	width: 329px;
+}
+.col_221{
+	width: 221px;
+	border-right: 1px solid #ccc;
+}
+.col_219{
+	width: 219px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+     <div id="container">
+        <!-- 设置最外面的容器div，包含里面的结构 -->
+      <div id="game">
+     <!-- 设置游戏区，也就是里面大的div块 -->
+          <div id="d1" onclick="move(1)">1</div>
+           <!-- 小div，也就是8个div，当点击时执行move()函数 -->
+          <div id="d2" onclick="move(2)">2</div>
+          <div id="d3" onclick="move(3)">3</div>
+          <div id="d4" onclick="move(4)">4</div>
+          <div id="d5" onclick="move(5)">5</div>
+          <div id="d6" onclick="move(6)">6</div>
+          <div id="d7" onclick="move(7)">7</div>
+          <div id="d8" onclick="move(8)">8</div>  
+      </div>
+      <div id="control">
+         <!-- 游戏控制区 -->
+         <p>
+            <rowpan id="timetext">总用时</rowpan>
+            <rowpan id="timer" ></rowpan>
+         </p>
+         <p>
+            <rowpan id="start" onclick="start()">开始</rowpan>
+            <rowpan id="reset" onclick="reset()">重置</rowpan>   
+         </p>    
+        </div>
+     </div>
+    <script src="puzzle.js"></script>
+</body>
+</html>
