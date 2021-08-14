@@ -7,3 +7,11 @@
 编程资源分享 + 人物传记 + 程序员生活 + 编程趣事儿
 
 > 一些有趣的前端小项目，可以按照目录分别使用
+
+1. 视频转字符画 char-video
+1. 520表白网站 my520
+1. 全屏樱花特效 樱花
+1. 全屏泡泡特效 bubble.html
+1. WoW特效-生日网站 cake.html
+1. Js编码表情字符 aaencode.html
+1. 极简计算器 calculator.html
