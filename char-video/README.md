@@ -1,5 +1,4 @@
 # 视频转字符画
-> 在线地址：https://char-video.now.sh
 
 ## 用法
 1. 提供video和canvas两个html标签
